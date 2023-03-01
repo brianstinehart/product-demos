@@ -3,6 +3,7 @@ collections:
   - name: redhat_cop.controller_configuration
     version: 2.1.1
   #linux
+  - servicenow.servicenow
   - servicenow.itsm
   - community.general
   - containers.podman
