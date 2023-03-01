@@ -13,7 +13,7 @@
         instance: "{{ snow_instance }}"
         state: present
         table: sc_request
-        number: "{{ snow_request }}"
+        number: "{{ number }}"
         data: 
           work_notes: "{{ snow_note }}"
       register: snow_var
