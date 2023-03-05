@@ -3,123 +3,52 @@ user_message: |
   - Be sure to update the 'activation_key' and 'org_id' extra variables for 'LINUX / Register'. https://access.redhat.com/management/activation_keys
   - Update Credential for Insights Inventory with Red Hat account.
   - Add variables for system_roles. https://console.redhat.com/ansible/automation-hub/repo/published/redhat/rhel_system_roles
-controller_components:
-  - projects  
-  - credential_types
-  # - credentials
-  # - inventory_sources
-  # - job_templates
-  # - project_update
+controller_components:  
+  - projects
+  - job_templates
 
 controller_projects:
-  - name: Cloud Deploy
+  - name: Demos Setup
     organization: Default
     scm_type: git
-    scm_url: 'https://github.com/brianstinehart/Cloud-Deploy.git'
+    scm_url: 'https://github.com/brianstinehart/product-demos/'
 
-controller_credential_types:
-  - name: "ServiceNow"
-    kind: "cloud"
-    inputs:
-      fields:
-        - id: username
-          type: string
-          label: Username
-        - id: password
-          type: string
-          label: Password
-          secret: true
-        - id: instance
-          type: string
-          label: Instance
-      required:
-        - username
-        - password
-        - instance
-    injectors:
-      extra_vars:
-        snow_username: !unsafe '{{ username }}'
-        snow_password: !unsafe '{{ password }}'
-        snow_instance: !unsafe '{{ instance }}'
-
-controller_credentials:
-  - name: ServiceNow Dev
-    credential_type: ServiceNow
-    organization: Default
-    inputs:
-      username: "{{ username }}"
-      password: "{{ password }}"
-      instance: "{{ instance }}"
-
-
-
-
-# controller_credential_types:
-#   - name: "Insights Collection"
-#     kind: cloud
-#     inputs:
-#       fields:
-#         - id: insights_user
-#           type: string
-#           label: Insights User
-#         - id: insights_password
-#           type: string
-#           label: Insights Password
-#           secret: true
-#     injectors:
-#       env:
-#         INSIGHTS_USER: "{% raw %}{  { insights_user  }}{% endraw %}"
-#         INSIGHTS_PASSWORD: "{% raw %}{  { insights_password  }}{% endraw %}"
-
-# controller_credentials:
-#   - name: Insights Inventory
-#     credential_type: Insights Collection
-#     organization: Default
-#     inputs:
-#       insights_user: REPLACEME
-#       insights_password: REPLACEME
-
-# controller_inventory_sources:
-#   - name: Insights Inventory
-#     inventory: Workshop Inventory
-#     source: scm
-#     source_project: Ansible official demo project
-#     source_path: linux/inventory.insights.yml
-#     credential: Insights Inventory
-
-# controller_templates:
-#   - name: "LINUX / Register"
-#     job_type: run
-#     inventory: "Workshop Inventory"
-#     project: "Ansible official demo project"
-#     playbook: "linux/ec2_register.yml"
-#     execution_environment: Default execution environment
-#     credentials:
-#     - "Workshop Credential"
-#     survey_enabled: true
-#     extra_vars:
-#       activation_key: undef
-#       org_id: undef
-#     survey:
-#       name: ''
-#       description: ''
-#       spec:
-#         - question_name: Server Name or Pattern
-#           type: text
-#           variable: HOSTS
-#           required: true
-#         - question_name: Choose Environment
-#           type: multiplechoice
-#           variable: env
-#           choices:
-#             - Dev
-#             - QA
-#             - Prod
-#           required: true
-#         - question_name: Ansible Group
-#           type: text
-#           variable: ansible_group
-#           required: true
+controller_templates:
+  - name: "setup demo - cloud deploy test"
+    job_type: run
+    inventory: "local-demo"
+    project: "Demos Setup"
+    playbook: "setup_demo.yml"
+    # execution_environment: Default execution environment
+    credentials:
+    - "aws-demo"
+    - "controller-demo"
+    # survey_enabled: true
+    extra_vars:
+      demo: brian_custom
+      username: admin
+      password: Kb2mfMd+L1U-
+      instance: dev97360
+    # survey:
+    #   name: ''
+    #   description: ''
+    #   spec:
+    #     - question_name: Server Name or Pattern
+    #       type: text
+    #       variable: HOSTS
+    #       required: true
+    #     - question_name: Choose Environment
+    #       type: multiplechoice
+    #       variable: env
+    #       choices:
+    #         - Dev
+    #         - QA
+    #         - Prod
+    #       required: true
+    #     - question_name: Ansible Group
+    #       type: text
+    #       variable: ansible_group
+    #       required: true
 #   - name: "LINUX / Troubleshoot"
 #     job_type: run
 #     inventory: "Workshop Inventory"
