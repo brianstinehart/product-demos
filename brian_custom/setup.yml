@@ -42,9 +42,9 @@ controller_credential_types:
         - instance
     injectors:
       extra_vars:
-        snow_instance: "{% raw %}{  { instance }}{% endraw %}"
-        snow_password: "{% raw %}{  { password }}{% endraw %}"
-        snow_username: "{% raw %}{  { username }}{% endraw %}"
+        snow_instance: !unsafe "{{ instance }}"
+        snow_password: !unsafe "{{ password }}"
+        snow_username: !unsafe "{{ username }}"
 
 # controller_credentials:
 #   - name: ServiceNow Dev
