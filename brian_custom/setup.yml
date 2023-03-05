@@ -79,6 +79,8 @@ controller_templates:
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
+    extra_vars:
+      snow_note: "This request has been recieved by Ansible Automation Platform. Please monitor Activity Stream for progress."
 
 # controller_credential_types:
 #   - name: "Insights Collection"
