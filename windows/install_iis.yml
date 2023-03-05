@@ -33,6 +33,3 @@
       set_stats:
         data:
           snow_note: "Windows Servers Completed - IIS Installed - The Server is available at http://{{ ansible_host }}"
-
-    - include_role:
-        name: snow_notify.yml

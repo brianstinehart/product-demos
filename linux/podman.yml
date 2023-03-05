@@ -59,6 +59,3 @@
     set_stats:
       data:
         snow_note: "Linux Servers Completed - Apache Installed - The Server is available at http://{{ ansible_host }}"
-
-  - include_role:
-      name: snow_notify.yml
