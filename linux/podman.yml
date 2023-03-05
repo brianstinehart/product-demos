@@ -60,13 +60,5 @@
       data:
         snow_note: "Linux Servers Completed - Apache Installed - The Server is available at http://{{ ansible_host }}"
 
-  - name: Update ServiceNow ticket with deployment details
-    snow_record:
-      username: "{{ snow_username }}"
-      password: "{{ snow_password }}"
-      instance: "{{ snow_instance }}"
-      state: present
-      table: sc_request
-      number: "{{ snow_request }}"
-      data: 
-        work_notes: "{{ snow_note }}"
+  - include_role:
+      name: snow_notify.yml
