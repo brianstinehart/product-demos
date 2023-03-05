@@ -17,10 +17,15 @@
       path: "{{ volume_path }}"
       state: directory
 
-  - name: Create index.html
-    ansible.builtin.copy:
+  - name: Create Website Content
+    template:
+      src: apache_standard.j2
       dest: "{{ volume_path }}/index.html"
-      content: "{{ message }}"
+
+  # - name: Create index.html
+  #   ansible.builtin.copy:
+  #     dest: "{{ volume_path }}/index.html"
+  #     content: "{{ message }}"
 
   - name: Run httpd container
     containers.podman.podman_container:
@@ -49,3 +54,19 @@
       msg: 
         - "{{ podman_output.stdout_lines }}"
         - "{{ web_output.content }}"
+
+  - name: set stats
+    set_stats:
+      data:
+        snow_note: "Linux Servers Completed - Apache Installed - The Server is available at http://{{ ansible_host }}"
+
+  - name: Update ServiceNow ticket with deployment details
+    snow_record:
+      username: "{{ snow_username }}"
+      password: "{{ snow_password }}"
+      instance: "{{ snow_instance }}"
+      state: present
+      table: sc_request
+      number: "{{ snow_request }}"
+      data: 
+        work_notes: "{{ snow_note }}"

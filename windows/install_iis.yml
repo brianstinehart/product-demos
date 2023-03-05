@@ -15,11 +15,32 @@
         name: W3Svc
         state: started
 
-    - name: Create website index.html
-      win_copy:
-        content: "{{ iis_message }}"
+    - name: Create Website Content
+      win_template:
+        src: apache_standard.j2
         dest: C:\Inetpub\wwwroot\index.html
+    
+    # - name: Create website index.html
+    #   win_copy:
+    #     content: "{{ iis_message }}"
+    #     dest: C:\Inetpub\wwwroot\index.html
 
     - name: Show website address
       debug:
         msg: http://{{ ansible_host }}
+
+    - name: set stats
+      set_stats:
+        data:
+          snow_note: "Windows Servers Completed - IIS Installed - The Server is available at http://{{ ansible_host }}"
+
+    - name: Update ServiceNow ticket with deployment details
+      snow_record:
+        username: "{{ snow_username }}"
+        password: "{{ snow_password }}"
+        instance: "{{ snow_instance }}"
+        state: present
+        table: sc_request
+        number: "{{ snow_request }}"
+        data: 
+          work_notes: "{{ snow_note }}"
