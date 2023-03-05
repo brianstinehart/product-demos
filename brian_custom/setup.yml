@@ -8,6 +8,7 @@ controller_components:
   - credential_types
   - credentials
   - applications
+  - settings
   # - inventory_sources
   # - job_templates
   # - project_update
@@ -60,6 +61,9 @@ controller_applications:
     redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
     client_type: "confidential"
 
+controller_settings:
+  - name: ALLOW_OAUTH2_FOR_EXTERNAL_USERS
+    value: true
 
 # controller_credential_types:
 #   - name: "Insights Collection"
