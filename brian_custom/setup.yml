@@ -50,10 +50,11 @@ controller_credential_types:
 # controller_credentials:
 #   - name: ServiceNow Dev
 #     credential_type: ServiceNow
-#     organization: Default
-#     inputs:
-#       insights_user: REPLACEME
-#       insights_password: REPLACEME
+    # organization: Default
+    # inputs:
+    #   username: REPLACEME
+    #   password: REPLACEME
+    #   instance: REPLACEME
 
 
 
