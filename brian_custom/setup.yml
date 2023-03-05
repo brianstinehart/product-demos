@@ -10,6 +10,7 @@ controller_components:
   - applications
   - settings
   # - inventory_sources
+  - execution_environments
   - job_templates
   # - project_update
 
