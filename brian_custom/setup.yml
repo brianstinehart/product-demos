@@ -57,7 +57,7 @@ controller_applications:
     description: "{{ instance }}"
     organization: "Default"
     authorization_grant_type: "authorization-code"
-    redirect_uris: https://"{{ instance }}".service-now.com/oauth_redirect.do
+    redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
     client_type: "confidential"
 
 
