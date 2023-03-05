@@ -10,7 +10,7 @@ controller_components:
   - applications
   - settings
   # - inventory_sources
-  # - job_templates
+  - job_templates
   # - project_update
 
 controller_projects:
@@ -64,6 +64,20 @@ controller_applications:
 controller_settings:
   - name: ALLOW_OAUTH2_FOR_EXTERNAL_USERS
     value: true
+
+controller_execution_environments:
+  - name: "ServiceNow EE"
+    image: quay.io/rhbs/aap-ee
+
+controller_templates:
+  - name: "ServiceNow Notification"
+    job_type: run
+    inventory: "local-demo"
+    project: "Cloud Deploy"
+    playbook: "servicenow/snow_notify.yml"
+    execution_environment: ServiceNow EE
+    credentials:
+    - "ServiceNow Dev"
 
 # controller_credential_types:
 #   - name: "Insights Collection"
