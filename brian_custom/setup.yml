@@ -24,6 +24,7 @@ controller_projects:
 
 controller_credential_types:
   - name: "ServiceNow"
+    kind: "cloud"
     inputs:
       fields:
         - id: username
@@ -42,9 +43,9 @@ controller_credential_types:
         - instance
     injectors:
       extra_vars:
-        snow_instance: !unsafe "{{ instance }}"
-        snow_password: !unsafe "{{ password }}"
-        snow_username: !unsafe "{{ username }}"
+        snow_username: !unsafe '{{ username }}'
+        snow_password: !unsafe '{{ password }}'
+        snow_instance: !unsafe '{{ instance }}'
 
 # controller_credentials:
 #   - name: ServiceNow Dev
