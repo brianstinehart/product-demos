@@ -81,6 +81,7 @@ controller_templates:
     - "ServiceNow Dev"
     extra_vars:
       snow_note: "This request has been recieved by Ansible Automation Platform. Please monitor Activity Stream for progress."
+      ansible_python_interpreter: /usr/bin/python3
 
 # controller_credential_types:
 #   - name: "Insights Collection"
