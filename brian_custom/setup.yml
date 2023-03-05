@@ -6,7 +6,7 @@ user_message: |
 controller_components:
   - projects  
   - credential_types
-  # - credentials
+  - credentials
   # - inventory_sources
   # - job_templates
   # - project_update
