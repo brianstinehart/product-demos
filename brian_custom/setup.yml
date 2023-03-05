@@ -35,7 +35,7 @@ controller_credential_types:
           secret: true
         - id: instance
           type: string
-          label: instance
+          label: Instance
       required:
         - username
         - password
