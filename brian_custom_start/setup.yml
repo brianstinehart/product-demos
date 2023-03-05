@@ -14,7 +14,7 @@ controller_projects:
     scm_url: 'https://github.com/brianstinehart/product-demos/'
 
 controller_templates:
-  - name: "setup demo - cloud deploy test"
+  - name: "Brian Cloud Deploy"
     job_type: run
     inventory: "local-demo"
     project: "Demos Setup"
