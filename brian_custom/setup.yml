@@ -5,11 +5,11 @@ user_message: |
   - Add variables for system_roles. https://console.redhat.com/ansible/automation-hub/repo/published/redhat/rhel_system_roles
 controller_components:
   - project_update
-  - projects
-  - credential_types
-  - credentials
-  - inventory_sources
-  - job_templates
+  # - projects
+  # - credential_types
+  # - credentials
+  # - inventory_sources
+  # - job_templates
 
 controller_project_update:
   - name: Ansible official demo project
