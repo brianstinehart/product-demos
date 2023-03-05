@@ -36,6 +36,10 @@ controller_credential_types:
         - id: instance
           type: string
           label: instance
+      required:
+        - username
+        - password
+        - instance
     injectors:
       extra_vars:
         snow_instance: "{% raw %}{  { instance  }}{% endraw %}"
