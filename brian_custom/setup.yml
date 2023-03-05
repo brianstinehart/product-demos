@@ -4,26 +4,54 @@ user_message: |
   - Update Credential for Insights Inventory with Red Hat account.
   - Add variables for system_roles. https://console.redhat.com/ansible/automation-hub/repo/published/redhat/rhel_system_roles
 controller_components:
-  - project_update
-  # - projects
-  # - credential_types
+  - projects  
+  - credential_types
   # - credentials
   # - inventory_sources
   # - job_templates
+  # - project_update
 
-controller_project_update:
-  - name: Ansible official demo project
-    scm_url: https://github.com/brianstinehart/product-demos/
+controller_projects:
+  - name: Demos Setup
+    organization: Default
+    scm_type: git
+    scm_url: 'https://github.com/brianstinehart/product-demos/'
 
+  - name: Cloud Deploy
+    organization: Default
+    scm_type: git
+    scm_url: 'https://github.com/brianstinehart/Cloud-Deploy.git'
 
+controller_credential_types:
+  - name: "ServiceNow"
+    inputs:
+      fields:
+        - id: username
+          type: string
+          label: Username
+        - id: password
+          type: string
+          label: Password
+          secret: true
+        - id: instance
+          type: string
+          label: instance
+    injectors:
+      extra_vars:
+        snow_instance: '{{ instance }}'
+        snow_password: '{{ password }}'
+        snow_username: '{{ username }}'
 
-
-
-# controller_projects:
-#   - name: Fact Scan
+# controller_credentials:
+#   - name: ServiceNow Dev
+#     credential_type: ServiceNow
 #     organization: Default
-#     scm_type: git
-#     scm_url: 'https://github.com/ansible/awx-facts-playbooks.git'
+#     inputs:
+#       insights_user: REPLACEME
+#       insights_password: REPLACEME
+
+
+
 
 # controller_credential_types:
 #   - name: "Insights Collection"
@@ -57,7 +85,6 @@ controller_project_update:
 #     source_project: Ansible official demo project
 #     source_path: linux/inventory.insights.yml
 #     credential: Insights Inventory
-
 
 # controller_templates:
 #   - name: "LINUX / Register"
@@ -297,3 +324,7 @@ controller_project_update:
 #           required: true
 #           choices:
 #             - stig
+
+# controller_projects:
+#   - name: Ansible official demo project
+#     scm_url: 'https://github.com/brianstinehart/product-demos/'
