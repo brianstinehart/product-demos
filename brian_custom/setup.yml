@@ -101,20 +101,20 @@ controller_templates:
 controller_workflows:
   - name: "Deploy App on Pre-Prod (AWS)"
     survey_enabled: true
-      survey_spec:
-        name: ''
-        description: ''
-        spec:
-          - question_name: ServiceNow Request Number
-            question_description: ServiceNow Request Number
-            required: true
-            type: text
-            variable: snow_request
-            min: 0
-            max: 1024
-            default: ''
-            choices: ''
-            new_question: true
+    survey_spec:
+      name: ''
+      description: ''
+      spec:
+        - question_name: ServiceNow Request Number
+          question_description: ServiceNow Request Number
+          required: true
+          type: text
+          variable: snow_request
+          min: 0
+          max: 1024
+          default: ''
+          choices: ''
+          new_question: true
 
 # controller_credential_types:
 #   - name: "Insights Collection"
