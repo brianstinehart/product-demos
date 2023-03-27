@@ -7,7 +7,7 @@ controller_components:
   - projects  
   - credential_types
   - credentials
-  - applications
+  # - applications
   - settings
   - inventories
   - hosts
