@@ -89,8 +89,6 @@ controller_templates:
     inventory: "local-demo"
     project: "Cloud Deploy"
     playbook: "servicenow/snow_notify.yml"
-    survey_enabled: true
-    survey: "{{ lookup('template', 'templates/survey.json') | regex_replace('\\n', '') }}"
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
