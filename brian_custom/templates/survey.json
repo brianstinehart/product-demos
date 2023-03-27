@@ -1,0 +1,18 @@
+{
+    "name": "Basic Survey",
+    "description": "Basic Survey",
+    "spec": [
+      {
+        "question_description": "ServiceNow Request Number",
+        "min": 0,
+        "default": "",
+        "max": 1024,
+        "required": true,
+        "choices": "",
+        "new_question": true,
+        "variable": "snow_request",
+        "question_name": "ServiceNow Request Number",
+        "type": "text"
+      }
+    ]
+  }
