@@ -96,6 +96,54 @@ controller_templates:
       snow_note: "This request has been received by Ansible Automation Platform. Please monitor Activity Stream for progress."
       ansible_python_interpreter: /usr/bin/python3
 
+  - name: "ServiceNow Create Incident"
+    job_type: run
+    inventory: "local-demo"
+    project: "Cloud Deploy"
+    playbook: "servicenow/snow_create_incident.yml"
+    execution_environment: ServiceNow EE
+    credentials:
+    - "ServiceNow Dev"
+    extra_vars:
+      ansible_python_interpreter: /usr/bin/python3
+
+  - name: "ServiceNow Close Incident"
+    job_type: run
+    inventory: "local-demo"
+    project: "Cloud Deploy"
+    playbook: "servicenow/snow_close_incident.yml"
+    execution_environment: ServiceNow EE
+    credentials:
+    - "ServiceNow Dev"
+    extra_vars:
+      ansible_python_interpreter: /usr/bin/python3
+    survey_enabled: true
+    survey_spec:
+      name: ''
+      description: ''
+      spec:
+        - question_name: Incident Number
+          question_description: ServiceNow Incident Number
+          required: true
+          type: text
+          variable: inc_number
+          min: 0
+          max: 1024
+          default: ''
+          choices: ''
+          new_question: true
+        - question_name: Resolution notes
+          question_description: ServiceNow Resolution notes
+          required: true
+          type: text
+          variable: close_notes
+          min: 0
+          max: 1024
+          default: ''
+          choices: ''
+          new_question: true
+    
+
 controller_workflows:
   - name: "Deploy App on Pre-Prod (AWS)"
     survey_enabled: true
