@@ -119,8 +119,8 @@ controller_templates:
       ansible_python_interpreter: /usr/bin/python3
     survey_enabled: true
     survey_spec:
-      name: ''
-      description: ''
+      name: 'Basic Survey'
+      description: 'Basic Survey'
       spec:
         - question_name: Incident Number
           question_description: ServiceNow Incident Number
