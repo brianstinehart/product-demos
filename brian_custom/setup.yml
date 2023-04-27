@@ -7,7 +7,7 @@ controller_components:
   - projects  
   - credential_types
   - credentials
-  # - applications
+  - applications
   - settings
   - inventories
   - hosts
@@ -118,9 +118,9 @@ controller_templates:
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
     survey_enabled: true
-    survey_spec:
-      name: 'Basic Survey'
-      description: 'Basic Survey'
+    survey:
+      name: ''
+      description: ''
       spec:
         - question_name: Incident Number
           question_description: ServiceNow Incident Number
