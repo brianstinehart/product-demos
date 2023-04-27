@@ -135,7 +135,7 @@ controller_templates:
       name: ''
       description: ''
       spec:
-        - question_name: Incident Number
+        - question_name: Change Request Number
           question_description: ServiceNow Incident Number
           required: true
           type: text
@@ -146,7 +146,7 @@ controller_templates:
           choices: ''
           new_question: true
         - question_name: Resolution notes
-          question_description: ServiceNow Resolution notes
+          question_description: ServiceNow Resolution Notes
           required: true
           type: text
           variable: close_notes
@@ -182,7 +182,7 @@ controller_templates:
           choices: ''
           new_question: true
         - question_name: Resolution notes
-          question_description: ServiceNow Resolution notes
+          question_description: ServiceNow Resolution Notes
           required: true
           type: text
           variable: close_notes
