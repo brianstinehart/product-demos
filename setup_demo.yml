@@ -29,6 +29,7 @@
           authorization_grant_type: "authorization-code"
           redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
           client_type: "confidential"
+        status_code: 201
       register: snow_result
 
     
