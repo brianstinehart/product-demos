@@ -20,6 +20,7 @@
         user: "{{ uri_user }}"
         password: "{{ uri_password }}"
         method: POST
+        force_basic_auth: true
         body_format: json
         body:
           name: Brian ServiceNow Dev
