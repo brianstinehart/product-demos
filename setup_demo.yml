@@ -14,8 +14,9 @@
       when:
         - controller_components | d("") | length > 0
 
-    - name: Brian ServiceNow Dev
+    - name: Create ServiceNow Application
       ansible.controller.application:
+        name: Brian ServiceNow Dev
         description: "{{ instance }}"
         organization: "Default"
         authorization_grant_type: "authorization-code"
