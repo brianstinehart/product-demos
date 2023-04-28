@@ -52,4 +52,6 @@
 
     - name: Print Message
       debug:
-        msg: "This is your client secret: {{ client_secret }}"
+        msg: 
+        - "This is your client secret: {{ client_secret }}"
+        - "This is your client ID: {{ client_id }}"
