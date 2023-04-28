@@ -38,7 +38,7 @@
 
     - name: Print Message
       debug:
-        var: find_output.client_secret
+        var: snow_app_result.client_secret
       register: client_secret
 
     - name: Print Message
