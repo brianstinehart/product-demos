@@ -12,7 +12,7 @@
     # Controller base URL prefix (e.g. aap-controller.4rr4p)
     controller_url_prefix: aap-controller.4rr4p
     # Controller base URL suffix (e.g. sandbox2307.opentlc.com)
-    controller_url_suffix: sandbox1234.opentlc.com
+    controller_url_suffix: sandbox2307.opentlc.com
 
 
   tasks:
@@ -54,10 +54,6 @@
       set_fact:
         client_secret: "{{ snow_app_result.json.client_secret }}"
         client_id: "{{ snow_app_result.json.client_id }}"
-
-    - name: Print Message
-      debug:
-        var: client_secret
 
     - name: Print Message
       debug:
