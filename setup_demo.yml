@@ -22,7 +22,7 @@
         body:
           name: Brian ServiceNow Dev
           description: "{{ instance }}"
-          organization: "Default"
+          organization: "1"
           authorization_grant_type: "authorization-code"
           redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
           client_type: "confidential"
