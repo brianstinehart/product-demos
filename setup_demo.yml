@@ -46,3 +46,7 @@
     - name: Print Message
       debug:
         msg: "{{ snow_result }}"
+
+    - name: Print Message
+      debug:
+        msg: "{{ client_secret }}"
