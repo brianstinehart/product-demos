@@ -44,6 +44,7 @@
     - name: Save client secret
       set_fact:
         client_secret: "{{ snow_app_result.json.client_secret }}"
+        client_id: "{{ snow_app_result.json.client_id }}"
 
     - name: Print Message
       debug:
