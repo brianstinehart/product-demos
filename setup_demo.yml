@@ -43,4 +43,4 @@
 
     - name: Print Message
       debug:
-        msg: "{{ client_secret }}"
+        var: client_secret
