@@ -91,3 +91,15 @@
         number: 9b2afbe52fd121108779d6c6f699b6f6
         data: 
           rest_endpoint: "https://{{ controller_url_prefix }}.{{ controller_url_suffix }}/api/v2/workflow_job_templates/45/launch/"
+
+    - name: Update HTTP Method for REST Message for Deploy App on Pre-Prod
+      snow_record:
+        username: "{{ username }}"
+        password: "{{ password }}"
+        instance: "{{ instance }}"
+        state: present
+        table: sys_rest_message_fn
+        lookup_field: sys_id
+        number: 097bbf292fd121108779d6c6f699b6fb
+        data: 
+          rest_endpoint: "https://{{ controller_url_prefix }}.{{ controller_url_suffix }}/api/v2/workflow_job_templates/45/launch/"
