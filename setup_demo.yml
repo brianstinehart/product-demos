@@ -30,22 +30,15 @@
           redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
           client_type: "confidential"
         status_code: 201
-      register: snow_result
-
-    
-    # - name: Create ServiceNow Application
-    #   ansible.controller.application:
-    #     name: Brian ServiceNow Dev
-    #     description: "{{ instance }}"
-    #     organization: "Default"
-    #     authorization_grant_type: "authorization-code"
-    #     redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
-    #     client_type: "confidential"
-    #   register: snow_result
+      register: snow_app_result
 
     - name: Print Message
       debug:
-        msg: "{{ snow_result }}"
+        msg: "{{ snow_app_result }}"
+
+    - name: Print Message
+      debug:
+        var: find_output.client_secret
 
     - name: Print Message
       debug:
