@@ -39,6 +39,7 @@
     - name: Print Message
       debug:
         var: find_output.client_secret
+      register: client_secret
 
     - name: Print Message
       debug:
