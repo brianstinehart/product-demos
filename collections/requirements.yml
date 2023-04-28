@@ -3,17 +3,17 @@ collections:
   - name: redhat_cop.controller_configuration
     version: 2.1.1
   - community.general
-  - containers.podman
+  # - containers.podman
   #windows
-  - chocolatey.chocolatey
-  - community.windows
-  - name: ansible.windows
-    version: 1.9.0
-  #cloud
-  - name: azure.azcollection
-    version: 1.13.0
-  - name: amazon.aws
-    version: 3.1.1
+  # - chocolatey.chocolatey
+  # - community.windows
+  # - name: ansible.windows
+  #   version: 1.9.0
+  # #cloud
+  # - name: azure.azcollection
+  #   version: 1.13.0
+  # - name: amazon.aws
+  #   version: 3.1.1
   # #brian_custom
   # - servicenow.servicenow
   # - servicenow.itsm
