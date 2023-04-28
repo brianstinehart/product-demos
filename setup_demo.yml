@@ -39,7 +39,11 @@
     - name: Print Message
       debug:
         var: snow_app_result.json.client_secret
-      register: client_secret
+      # register: client_secret
+
+    - name: Save client secret
+      set_fact:
+        client_secret: "{{ snow_app_result.json.client_secret }}"
 
     - name: Print Message
       debug:
