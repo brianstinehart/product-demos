@@ -44,3 +44,7 @@
     - name: Print Message
       debug:
         var: client_secret
+
+    - name: Print Message
+      debug:
+        msg: "This is your client secret: {{ snow_app_result }}"
