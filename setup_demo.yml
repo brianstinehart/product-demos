@@ -16,7 +16,7 @@
 
     - name: Create ServiceNow Application
       ansible.builtin.uri:
-        url: https://aap-controller.4rr4p.sandbox2307.opentlc.com/api/v2/applications/
+        url: https://aap-controller.4rr4p.internal/api/v2/applications/
         method: POST
         body_format: json
         body:
