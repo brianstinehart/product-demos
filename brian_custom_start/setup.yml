@@ -25,6 +25,7 @@ controller_templates:
     - "controller-demo"
     # survey_enabled: true
     extra_vars:
+      ansible_python_interpreter: /usr/bin/python3
       demo: brian_custom
       username: admin
       password: Kb2mfMd+L1U-
