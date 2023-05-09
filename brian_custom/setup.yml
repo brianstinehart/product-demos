@@ -201,6 +201,12 @@ controller_templates:
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
+    extra_vars:
+      ansible_python_interpreter: /usr/bin/python3
+      demo: brian_custom
+      username: admin
+      password: Kb2mfMd+L1U-
+      instance: dev97360
 
 controller_workflows:
   - name: "Deploy App on Pre-Prod (AWS)"
