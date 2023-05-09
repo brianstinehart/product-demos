@@ -3,16 +3,16 @@
   gather_facts: no
   vars_files:
     - "{{demo}}/setup.yml"
-  vars:
-    controller_validate_certs: false
-    # Controller user for URI module call
-    uri_user: admin
-    # Controller user password for URI module call
-    uri_password: MTQwMDIz
-    # Controller base URL prefix (e.g. aap-controller.4rr4p)
-    controller_url_prefix: aap-controller.hq44m
-    # Controller base URL suffix (e.g. sandbox2307.opentlc.com)
-    controller_url_suffix: sandbox1938.opentlc.com
+  # vars:
+  #   controller_validate_certs: false
+  #   # Controller user for URI module call
+  #   uri_user: admin
+  #   # Controller user password for URI module call
+  #   uri_password: MTQwMDIz
+  #   # Controller base URL prefix (e.g. aap-controller.4rr4p)
+  #   controller_url_prefix: aap-controller.hq44m
+  #   # Controller base URL suffix (e.g. sandbox2307.opentlc.com)
+  #   controller_url_suffix: sandbox1938.opentlc.com
 
 
   tasks:
