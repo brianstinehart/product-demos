@@ -23,10 +23,6 @@
       when:
         - controller_components | d("") | length > 0
 
-    - name: Setup ServiceNow
-      include_role:
-        name: servicenow
-
     # - name: Create ServiceNow Application
     #   ansible.builtin.uri:
     #     url: "https://{{ controller_url_prefix }}.internal/api/v2/applications/"

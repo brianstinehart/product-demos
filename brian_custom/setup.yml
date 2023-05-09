@@ -15,6 +15,7 @@ controller_components:
   - execution_environments
   - job_templates
   - workflow_job_templates
+  - job_launch
   # - project_update
 
 controller_projects:
@@ -191,6 +192,13 @@ controller_templates:
           default: ''
           choices: ''
           new_question: true
+
+  - name: "ServiceNow Setup"
+    job_type: run
+    inventory: "local-demo"
+    project: "Cloud Deploy"
+    playbook: "servicenow/snow_setup.yml"
+    execution_environment: ServiceNow EE
     
 
 controller_workflows:
@@ -210,6 +218,9 @@ controller_workflows:
           default: ''
           choices: ''
           new_question: true
+
+controller_launch_jobs:
+  - name: ServiceNow Setup
 
 # controller_credential_types:
 #   - name: "Insights Collection"
