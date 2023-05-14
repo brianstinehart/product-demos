@@ -30,6 +30,9 @@ controller_templates:
       username: admin
       password: Kb2mfMd+L1U-
       instance: dev97360
+
+controller_launch_jobs:
+  - name: Brian Cloud Deploy
     # survey:
     #   name: ''
     #   description: ''
