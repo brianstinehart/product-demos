@@ -6,6 +6,7 @@ user_message: |
 controller_components:  
   - projects
   - job_templates
+  - job_launch
 
 controller_projects:
   - name: Demos Setup
