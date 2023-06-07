@@ -101,7 +101,7 @@ controller_templates:
     job_type: run
     inventory: "local-demo"
     project: "Cloud Deploy"
-    playbook: "servicenow/snow_create_incident.yml"
+    playbook: "roles/servicenow/snow_create_incident.yml"
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
@@ -112,7 +112,7 @@ controller_templates:
     job_type: run
     inventory: "local-demo"
     project: "Cloud Deploy"
-    playbook: "servicenow/snow_create_change_request.yml"
+    playbook: "roles/servicenow/snow_create_change_request.yml"
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
@@ -124,7 +124,7 @@ controller_templates:
     job_type: run
     inventory: "local-demo"
     project: "Cloud Deploy"
-    playbook: "servicenow/snow_close_change_request.yml"
+    playbook: "roles/servicenow/snow_close_change_request.yml"
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
@@ -161,7 +161,7 @@ controller_templates:
     job_type: run
     inventory: "local-demo"
     project: "Cloud Deploy"
-    playbook: "servicenow/snow_close_incident.yml"
+    playbook: "roles/servicenow/snow_close_incident.yml"
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
@@ -197,7 +197,7 @@ controller_templates:
     job_type: run
     inventory: "local-demo"
     project: "Cloud Deploy"
-    playbook: "servicenow/snow_setup.yml"
+    playbook: "roles/servicenow/snow_setup.yml"
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
