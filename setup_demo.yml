@@ -8,7 +8,7 @@
   tasks:
     - name: Setup Components
       ansible.builtin.include_role:
-        name: "infra.controller_configuration.{{ item }}"
+        name: "redhat_cop.controller_configuration.{{ item }}"
       loop: "{{ controller_components }}"
       when:
         - controller_components | d("") | length > 0
