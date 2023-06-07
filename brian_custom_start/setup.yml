@@ -5,6 +5,8 @@ user_message: |
   - Add variables for system_roles. https://console.redhat.com/ansible/automation-hub/repo/published/redhat/rhel_system_roles
 controller_components:  
   - projects
+  - inventories
+  - hosts
   - job_templates
   - job_launch
 
@@ -13,6 +15,16 @@ controller_projects:
     organization: Default
     scm_type: git
     scm_url: 'https://github.com/brianstinehart/product-demos/'
+
+controller_inventories:
+  - name: local-demo
+    organization: Default
+
+controller_hosts:
+  - name: localhost
+    inventory: local-demo
+    variables:
+      ansible_connection: local
 
 controller_templates:
   - name: "Brian Cloud Deploy"

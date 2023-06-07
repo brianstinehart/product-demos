@@ -9,8 +9,8 @@ controller_components:
   - credentials
   # - applications
   - settings
-  - inventories
-  - hosts
+  # - inventories
+  # - hosts
   # - inventory_sources
   - execution_environments
   - job_templates
@@ -70,15 +70,15 @@ controller_settings:
   - name: ALLOW_OAUTH2_FOR_EXTERNAL_USERS
     value: true
 
-controller_inventories:
-  - name: local-demo
-    organization: Default
+# controller_inventories:
+#   - name: local-demo
+#     organization: Default
 
-controller_hosts:
-  - name: localhost
-    inventory: local-demo
-    variables:
-      ansible_connection: local
+# controller_hosts:
+#   - name: localhost
+#     inventory: local-demo
+#     variables:
+#       ansible_connection: local
 
 controller_execution_environments:
   - name: "ServiceNow EE"
