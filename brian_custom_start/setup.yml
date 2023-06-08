@@ -11,7 +11,7 @@ controller_components:
   - job_launch
 
 controller_projects:
-  - name: Demos Setup
+  - name: Demo Setup
     organization: Default
     scm_type: git
     scm_url: 'https://github.com/brianstinehart/product-demos/'
