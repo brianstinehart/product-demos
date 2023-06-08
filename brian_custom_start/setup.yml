@@ -34,7 +34,6 @@ controller_templates:
     playbook: "setup_demo.yml"
     # execution_environment: Default execution environment
     credentials:
-    - "aws-demo"
     - "controller-demo"
     # survey_enabled: true
     extra_vars:
