@@ -208,23 +208,23 @@ controller_templates:
       password: Kb2mfMd+L1U-
       instance: dev97360
 
-controller_workflows:
-  - name: "Deploy App on Pre-Prod (AWS)"
-    survey_enabled: true
-    survey_spec:
-      name: ''
-      description: ''
-      spec:
-        - question_name: ServiceNow Request Number
-          question_description: ServiceNow Request Number
-          required: true
-          type: text
-          variable: snow_request
-          min: 0
-          max: 1024
-          default: ''
-          choices: ''
-          new_question: true
+# controller_workflows:
+#   - name: "Deploy App on Pre-Prod (AWS)"
+#     survey_enabled: true
+#     survey_spec:
+#       name: ''
+#       description: ''
+#       spec:
+#         - question_name: ServiceNow Request Number
+#           question_description: ServiceNow Request Number
+#           required: true
+#           type: text
+#           variable: snow_request
+#           min: 0
+#           max: 1024
+#           default: ''
+#           choices: ''
+#           new_question: true
 
 controller_launch_jobs:
   - name: ServiceNow Setup

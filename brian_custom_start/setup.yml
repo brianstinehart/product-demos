@@ -30,7 +30,7 @@ controller_templates:
   - name: "Brian Cloud Deploy"
     job_type: run
     inventory: "local-demo"
-    project: "Demos Setup"
+    project: "Demo Setup"
     playbook: "setup_demo.yml"
     # execution_environment: Default execution environment
     credentials:
