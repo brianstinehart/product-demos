@@ -89,7 +89,7 @@ controller_templates:
     job_type: run
     inventory: "local-demo"
     project: "Cloud Deploy"
-    playbook: "roles/servicenow/snow_notify.yml"
+    playbook: "playbooks/servicenow/snow_notify.yml"
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
