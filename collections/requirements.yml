@@ -2,8 +2,6 @@
 collections:
   - name: redhat_cop.controller_configuration
     version: 2.1.1
-  - name: ansible.controller
-    version: 4.3.0
   # - community.general
   # - containers.podman
   #windows
