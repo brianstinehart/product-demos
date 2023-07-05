@@ -7,6 +7,7 @@ controller_components:
   - projects
   - inventories
   - hosts
+  - credentials
   - job_templates
   - job_launch
 
@@ -26,6 +27,15 @@ controller_hosts:
     variables:
       ansible_connection: local
 
+controller_credentials:
+  - name: AAP
+    credential_type: Red Hat Ansible Automation Platform
+    organization: Default
+    inputs:
+      host: "{{ controller_hostname }}"
+      password: "{{ controller_password }}"
+      instance: "{{ controller_username }}"
+
 controller_templates:
   - name: "Brian ServiceNow Setup"
     job_type: run
@@ -34,7 +44,7 @@ controller_templates:
     playbook: "setup_demo.yml"
     # execution_environment: Default execution environment
     credentials:
-    - "controller-demo"
+    - "AAP"
     # survey_enabled: true
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
