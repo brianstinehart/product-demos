@@ -58,13 +58,13 @@ controller_credentials:
       password: "{{ password }}"
       instance: "{{ instance }}"
 
-controller_applications:
-  - name: Brian ServiceNow Dev
-    description: "{{ instance }}"
-    organization: "Default"
-    authorization_grant_type: "authorization-code"
-    redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
-    client_type: "confidential"
+# controller_applications:
+#   - name: Brian ServiceNow Dev
+#     description: "{{ instance }}"
+#     organization: "Default"
+#     authorization_grant_type: "authorization-code"
+#     redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
+#     client_type: "confidential"
 
 controller_settings:
   - name: ALLOW_OAUTH2_FOR_EXTERNAL_USERS
