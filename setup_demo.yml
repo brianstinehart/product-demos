@@ -2,10 +2,12 @@
 - name: Demo Setup
   hosts: localhost
   gather_facts: false
-  vars_files:
-    - "{{demo}}/setup.yml"
 
   tasks:
+
+    - name: "Include configuration for {{ demo }}"
+      ansible.builtin.include_vars: "{{ demo }}/setup.yml"
+
     - name: Setup Components
       ansible.builtin.include_role:
         name: "redhat_cop.controller_configuration.{{ item }}"
