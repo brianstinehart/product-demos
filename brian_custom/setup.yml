@@ -87,7 +87,7 @@ controller_execution_environments:
 controller_templates:
   - name: "ServiceNow Notification"
     job_type: run
-    inventory: "local-demo"
+    inventory: "Demo Inventory"
     project: "Cloud Deploy"
     playbook: "playbooks/servicenow/snow_notify.yml"
     execution_environment: ServiceNow EE
@@ -99,7 +99,7 @@ controller_templates:
 
   - name: "ServiceNow Create Incident"
     job_type: run
-    inventory: "local-demo"
+    inventory: "Demo Inventory"
     project: "Cloud Deploy"
     playbook: "playbooks/servicenow/snow_create_incident.yml"
     execution_environment: ServiceNow EE
@@ -110,7 +110,7 @@ controller_templates:
 
   - name: "ServiceNow Create Change Request"
     job_type: run
-    inventory: "local-demo"
+    inventory: "Demo Inventory"
     project: "Cloud Deploy"
     playbook: "playbooks/servicenow/snow_create_change_request.yml"
     execution_environment: ServiceNow EE
@@ -122,7 +122,7 @@ controller_templates:
 
   - name: "ServiceNow Close Change Request"
     job_type: run
-    inventory: "local-demo"
+    inventory: "Demo Inventory"
     project: "Cloud Deploy"
     playbook: "playbooks/servicenow/snow_close_change_request.yml"
     execution_environment: ServiceNow EE
@@ -159,7 +159,7 @@ controller_templates:
 
   - name: "ServiceNow Close Incident"
     job_type: run
-    inventory: "local-demo"
+    inventory: "Demo Inventory"
     project: "Cloud Deploy"
     playbook: "playbooks/servicenow/snow_close_incident.yml"
     execution_environment: ServiceNow EE
@@ -195,7 +195,7 @@ controller_templates:
 
   - name: "ServiceNow Setup"
     job_type: run
-    inventory: "local-demo"
+    inventory: "Demo Inventory"
     project: "Cloud Deploy"
     playbook: "playbooks/servicenow/snow_setup.yml"
     execution_environment: ServiceNow EE
