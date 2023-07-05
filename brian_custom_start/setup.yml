@@ -34,7 +34,7 @@ controller_credentials:
     inputs:
       host: "{{ controller_hostname }}"
       password: "{{ controller_password }}"
-      instance: "{{ controller_username }}"
+      username: "{{ controller_username }}"
 
 controller_templates:
   - name: "Brian ServiceNow Setup"
