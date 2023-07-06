@@ -49,6 +49,35 @@ controller_credential_types:
         snow_password: !unsafe '{{ password }}'
         snow_instance: !unsafe '{{ instance }}'
 
+  - name: "URI"
+    kind: "cloud"
+    inputs:
+      fields:
+        - id: uri_user
+          type: string
+          label: URI Username
+        - id: uri_password
+          type: string
+          label: URI Password
+          secret: true
+        - id: controller_url_prefix
+          type: string
+          label: Controller URI Prefix
+        - id: controller_url_suffix
+          type: string
+          label: Controller URI Suffix
+      required:
+        - uri_user
+        - uri_password
+        - controller_url_prefix
+        - controller_url_suffix
+    injectors:
+      extra_vars:
+        uri_user: '{{ uri_user }}'
+        uri_password: '{{ uri_password }}'
+        controller_url_prefix: '{{ controller_url_prefix }}'
+        controller_url_suffix: '{{ controller_url_suffix }}'
+
 controller_credentials:
   - name: ServiceNow Dev
     credential_type: ServiceNow
@@ -57,6 +86,15 @@ controller_credentials:
       username: "{{ username }}"
       password: "{{ password }}"
       instance: "{{ instance }}"
+
+  - name: URI Credential
+    credential_type: URI
+    organization: Default
+    inputs:
+      uri_user: '{{ uri_user }}'
+      uri_password: '{{ uri_password }}'
+      controller_url_prefix: '{{ controller_url_prefix }}'
+      controller_url_suffix: '{{ controller_url_suffix }}'
 
 # controller_applications:
 #   - name: Brian ServiceNow Dev
@@ -207,6 +245,9 @@ controller_templates:
       username: admin
       password: Kb2mfMd+L1U-
       instance: dev97360
+
+  - name: "Brian ServiceNow Setup"
+    state: absent
 
 # controller_workflows:
 #   - name: "Deploy App on Pre-Prod (AWS)"

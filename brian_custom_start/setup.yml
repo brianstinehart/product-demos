@@ -49,9 +49,13 @@ controller_templates:
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
       demo: brian_custom
-      username: admin
-      password: Kb2mfMd+L1U-
-      instance: dev97360
+      username: "{{ username }}"
+      password: "{{ password }}"
+      instance: "{{ instance }}"
+      uri_user: '{{ uri_user }}'
+      uri_password: '{{ uri_password }}'
+      controller_url_prefix: '{{ controller_url_prefix }}'
+      controller_url_suffix: '{{ controller_url_suffix }}'
 
 controller_launch_jobs:
   - name: Brian ServiceNow Setup
