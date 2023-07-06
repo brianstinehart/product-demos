@@ -239,12 +239,10 @@ controller_templates:
     execution_environment: ServiceNow EE
     credentials:
     - "ServiceNow Dev"
+    - "URI Credential"
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
       demo: brian_custom
-      username: admin
-      password: Kb2mfMd+L1U-
-      instance: dev97360
 
   # - name: "Brian ServiceNow Setup"
   #   state: absent
