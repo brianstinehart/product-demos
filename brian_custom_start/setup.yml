@@ -54,8 +54,7 @@ controller_templates:
       instance: "{{ instance }}"
       uri_user: '{{ uri_user }}'
       uri_password: '{{ uri_password }}'
-      controller_url_prefix: '{{ controller_url_prefix }}'
-      controller_url_suffix: '{{ controller_url_suffix }}'
+      controller_url: '{{ controller_url }}'
 
 controller_launch_jobs:
   - name: Brian ServiceNow Setup

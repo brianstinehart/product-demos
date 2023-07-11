@@ -60,23 +60,18 @@ controller_credential_types:
           type: string
           label: URI Password
           secret: true
-        - id: controller_url_prefix
+        - id: controller_url
           type: string
-          label: Controller URI Prefix
-        - id: controller_url_suffix
-          type: string
-          label: Controller URI Suffix
+          label: Controller URL for URI module
       required:
         - uri_user
         - uri_password
-        - controller_url_prefix
-        - controller_url_suffix
+        - controller_url
     injectors:
       extra_vars:
         uri_user: '{{ uri_user }}'
         uri_password: '{{ uri_password }}'
-        controller_url_prefix: '{{ controller_url_prefix }}'
-        controller_url_suffix: '{{ controller_url_suffix }}'
+        controller_url: '{{ controller_url }}'
 
 controller_credentials:
   - name: ServiceNow Dev
@@ -93,8 +88,7 @@ controller_credentials:
     inputs:
       uri_user: '{{ uri_user }}'
       uri_password: '{{ uri_password }}'
-      controller_url_prefix: '{{ controller_url_prefix }}'
-      controller_url_suffix: '{{ controller_url_suffix }}'
+      controller_url: '{{ controller_url }}'
 
 # controller_applications:
 #   - name: Brian ServiceNow Dev
