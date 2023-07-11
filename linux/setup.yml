@@ -45,7 +45,7 @@ controller_inventory_sources:
   - name: Insights Inventory
     inventory: Workshop Inventory
     source: scm
-    source_project: Ansible official demo project
+    source_project: Demo Setup
     source_path: linux/inventory.insights.yml
     credential: Insights Inventory
 
