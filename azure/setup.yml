@@ -5,9 +5,9 @@ user_message: |
 azure_public_key: undef
 controller_components:
   - projects
-  - credentials
+  # - credentials
   - inventories
-  - inventory_sources
+  # - inventory_sources
   - job_templates
 
 controller_projects:
