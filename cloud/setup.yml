@@ -5,7 +5,7 @@ user_message:
 
 controller_components:
   # - credentials
-  - inventory_sources
+  # - inventory_sources
   - job_templates
 
 controller_credentials:
