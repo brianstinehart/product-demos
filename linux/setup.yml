@@ -45,7 +45,7 @@ controller_inventory_sources:
   - name: Insights Inventory
     inventory: Workshop Inventory
     source: scm
-    source_project: Demo Setup
+    source_project: "Demo Setup"
     source_path: linux/inventory.insights.yml
     credential: Insights Inventory
 
@@ -54,7 +54,7 @@ controller_templates:
   - name: "LINUX / Register"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/ec2_register.yml"
     execution_environment: Default execution environment
     credentials:
@@ -86,7 +86,7 @@ controller_templates:
   - name: "LINUX / Troubleshoot"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/tshoot.yml"
     execution_environment: Default execution environment
     use_fact_cache: true
@@ -104,7 +104,7 @@ controller_templates:
   - name: "LINUX / Temporary Sudo"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/temp_sudo.yml"
     execution_environment: Default execution environment
     credentials:
@@ -130,7 +130,7 @@ controller_templates:
   - name: "LINUX / Patching"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/patching.yml"
     execution_environment: Default execution environment
     use_fact_cache: true
@@ -150,7 +150,7 @@ controller_templates:
   - name: "LINUX / Start Service"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/service_start.yml"
     execution_environment: Default execution environment
     use_fact_cache: true
@@ -172,7 +172,7 @@ controller_templates:
   - name: "LINUX / Stop Service"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/service_stop.yml"
     execution_environment: Default execution environment
     use_fact_cache: true
@@ -194,7 +194,7 @@ controller_templates:
   - name: "LINUX / Run Shell Script"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/run_script.yml"
     execution_environment: Default execution environment
     credentials:
@@ -224,7 +224,7 @@ controller_templates:
   - name: "LINUX / Podman Webserver"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/podman.yml"
     execution_environment: Default execution environment
     credentials:
@@ -245,7 +245,7 @@ controller_templates:
   - name: "LINUX / System Roles"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/system_roles.yml"
     execution_environment: Default execution environment
     diff_mode: yes
@@ -266,7 +266,7 @@ controller_templates:
   - name: "LINUX / Compliance"
     job_type: run
     inventory: "Workshop Inventory"
-    project: "Ansible official demo project"
+    project: "Demo Setup"
     playbook: "linux/compliance.yml"
     execution_environment: Default execution environment
     credentials:
