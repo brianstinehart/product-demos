@@ -4,7 +4,7 @@ user_message:
  - Update Workshop Credential with password used to login to Controller
 
 controller_components:
-  - credentials
+  # - credentials
   - inventory_sources
   - job_templates
 
@@ -28,7 +28,7 @@ controller_inventory_sources:
   - name: AWS Inventory
     organization: Default
     source: ec2
-    inventory: Workshop Inventory
+    inventory: Demo Inventory
     credential: AWS
     overwrite: true
     source_vars:
@@ -68,7 +68,7 @@ controller_templates:
      #- Azure
     project: Ansible official demo project
     playbook: cloud/create_infra.yml
-    inventory: Workshop Inventory
+    inventory: Demo Inventory
     execution_environment: Default execution environment
     survey_enabled: true
     extra_vars:
@@ -97,7 +97,7 @@ controller_templates:
      - Workshop Credential
     project: Ansible official demo project
     playbook: cloud/create_vm.yml
-    inventory: Workshop Inventory
+    inventory: Demo Inventory
     execution_environment: Default execution environment
     survey_enabled: true
     extra_vars:
@@ -139,7 +139,7 @@ controller_templates:
      - Workshop Credential
     project: Ansible official demo project
     playbook: cloud/destroy_vm.yml
-    inventory: Workshop Inventory
+    inventory: Demo Inventory
     execution_environment: Default execution environment
     survey_enabled: true
     extra_vars:
