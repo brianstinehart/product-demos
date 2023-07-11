@@ -3,18 +3,18 @@
   hosts: localhost
   connection: local
   gather_facts: false
-  vars:
-    demo: "{{ <insert_variable }}"
-    controller_validate_certs: false
-    controller_hostname: "{{ <insert_variable }}"
-    controller_username: "{{ <insert_variable }}"
-    controller_password: "{{ <insert_variable }}"
-    username: "{{ <insert_variable }}"
-    password: "{{ <insert_variable }}"
-    instance: "{{ <insert_variable }}"
-    uri_user: "{{ controller_username }}"
-    uri_password: "{{ controller_password }}"
-    controller_url: "{{ controller_hostname }}"
+  # vars:
+  #   demo: "{{ <insert_variable }}"
+  #   controller_validate_certs: false
+  #   controller_hostname: "{{ <insert_variable }}"
+  #   controller_username: "{{ <insert_variable }}"
+  #   controller_password: "{{ <insert_variable }}"
+  #   username: "{{ <insert_variable }}"
+  #   password: "{{ <insert_variable }}"
+  #   instance: "{{ <insert_variable }}"
+  #   uri_user: "{{ controller_username }}"
+  #   uri_password: "{{ controller_password }}"
+  #   controller_url: "{{ controller_hostname }}"
   collections:
     - awx.awx
     - redhat_cop.controller_configuration
