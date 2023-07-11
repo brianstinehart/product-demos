@@ -145,6 +145,36 @@ controller_templates:
     - "ServiceNow Dev"
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
+    survey:
+      name: ''
+      description: ''
+      spec:
+        - question_name: Incident Description Summary
+          question_description: Short description of incident
+          required: true
+          type: text
+          variable: short_description
+          min: 0
+          max: 1024
+          default: 'This is a test incident opened by Ansible'
+          choices: ''
+          new_question: true
+        - question_name: "Incident Urgency: 1 - High, 2 - Medium, 3 - Low"
+          question_description: "1 = High, 2 = Medium, 3 = Low"
+          required: true
+          type: multiplechoice
+          variable: urgency
+          default: "2"
+          choices: "1/n2/n3"
+          new_question: true
+        - question_name: "Incident Impact: 1 - High, 2 - Medium, 3 - Low"
+          question_description: "1 = High, 2 = Medium, 3 = Low"
+          required: true
+          type: multiplechoice
+          variable: impact
+          default: "2"
+          choices: "1/n2/n3"
+          new_question: true
 
   - name: "ServiceNow Create Change Request"
     job_type: run
@@ -175,7 +205,7 @@ controller_templates:
       description: ''
       spec:
         - question_name: Change Request Number
-          question_description: ServiceNow Incident Number
+          question_description: ServiceNow Change Request Number
           required: true
           type: text
           variable: inc_number
