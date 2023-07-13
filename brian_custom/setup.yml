@@ -159,7 +159,7 @@ controller_templates:
           type: multiplechoice
           variable: urgency
           default: "2"
-          choices: "1/n2/n3"
+          choices: "1\n2\n3"
           new_question: true
         - question_name: "Incident Impact: 1 - High, 2 - Medium, 3 - Low"
           question_description: "1 = High, 2 = Medium, 3 = Low"
@@ -167,7 +167,7 @@ controller_templates:
           type: multiplechoice
           variable: impact
           default: "2"
-          choices: "1/n2/n3"
+          choices: "1\n2\n3"
           new_question: true
 
   - name: "ServiceNow Create Change Request"
