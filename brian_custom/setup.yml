@@ -154,6 +154,26 @@ controller_templates:
           default: 'This is a test incident opened by Ansible'
           choices: ''
           new_question: true
+        - question_name: Incident Assigned To
+          question_description: Who the incident will be assigned to
+          required: true
+          type: text
+          variable: assigned_to
+          min: 0
+          max: 1024
+          default: 'Charlie Whitherspoon'
+          choices: ''
+          new_question: true
+        - question_name: Incident Caller
+          question_description: Who is the caller of the incident
+          required: true
+          type: text
+          variable: caller_id
+          min: 0
+          max: 1024
+          default: 'Adela Cervantsz'
+          choices: ''
+          new_question: true
         - question_name: "Incident Urgency: 1 - High, 2 - Medium, 3 - Low"
           question_description: "1 = High, 2 = Medium, 3 = Low"
           required: true
