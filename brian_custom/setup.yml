@@ -154,6 +154,16 @@ controller_templates:
           default: 'This is a test incident opened by Ansible'
           choices: ''
           new_question: true
+        - question_name: Incident Description
+          question_description: Detailed description of incident
+          required: true
+          type: text
+          variable: description
+          min: 0
+          max: 1024
+          default: 'This is a detailed description of the incident'
+          choices: ''
+          new_question: true
         - question_name: Incident Assigned To
           question_description: Who the incident will be assigned to
           required: true
