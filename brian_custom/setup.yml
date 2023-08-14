@@ -211,7 +211,7 @@ controller_templates:
     - "ServiceNow Dev"
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
-      snow_host: https://{{ snow_instance }}.service-now.com/
+      snow_host: https://{{ instance }}.service-now.com/
 
   - name: "ServiceNow Close Change Request"
     job_type: run
@@ -223,7 +223,7 @@ controller_templates:
     - "ServiceNow Dev"
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
-      snow_host: https://{{ snow_instance }}.service-now.com/
+      snow_host: https://{{ instance }}.service-now.com/
     survey_enabled: true
     survey:
       name: ''
