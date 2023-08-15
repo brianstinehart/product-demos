@@ -217,7 +217,7 @@ controller_templates:
       name: ''
       description: ''
       spec:
-        - question_name: Incident Description Summary
+        - question_name: Change Request Description Summary
           question_description: Short description of incident
           required: true
           type: text
@@ -227,7 +227,7 @@ controller_templates:
           default: 'This is a test change request opened by Ansible'
           choices: ''
           new_question: true
-        - question_name: Incident Description
+        - question_name: Change Request Description
           question_description: Detailed description of change request
           required: true
           type: text
@@ -237,8 +237,8 @@ controller_templates:
           default: 'This is a detailed description of the change request'
           choices: ''
           new_question: true
-        - question_name: Incident Assigned To
-          question_description: Who the incident will be assigned to
+        - question_name: Change Request Assigned To
+          question_description: Who the Change Request will be assigned to
           required: true
           type: text
           variable: assigned_to
@@ -247,7 +247,7 @@ controller_templates:
           default: 'Charlie Whitherspoon'
           choices: ''
           new_question: true
-        - question_name: Incident type
+        - question_name: Change Request type
           question_description: "Standard, Normal, or Emergency"
           required: true
           type: multiplechoice
@@ -255,7 +255,7 @@ controller_templates:
           default: "standard"
           choices: "standard\nnormal\nemergency"
           new_question: true
-        - question_name: Incident Risk
+        - question_name: Change Request Risk
           question_description: "High, Moderate, or Low"
           required: true
           type: multiplechoice
@@ -263,7 +263,7 @@ controller_templates:
           default: "moderate"
           choices: "high\nmoderate\nlow"
           new_question: true
-        - question_name: Incident Impact
+        - question_name: Change Request Impact
           question_description: "High, Medium, or Low"
           required: true
           type: multiplechoice
@@ -271,7 +271,7 @@ controller_templates:
           default: "medium"
           choices: "high\nmedium\nlow"
           new_question: true
-        - question_name: Incident Priority
+        - question_name: Change Request Priority
           question_description: "Critical, High, Moderate, or Low"
           required: true
           type: multiplechoice
