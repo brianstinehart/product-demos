@@ -251,7 +251,7 @@ controller_templates:
           question_description: "Standard, Normal, or Emergency"
           required: true
           type: multiplechoice
-          variable: urgency
+          variable: chg_type
           default: "standard"
           choices: "standard\nnormal\nemergency"
           new_question: true
@@ -259,7 +259,7 @@ controller_templates:
           question_description: "High, Moderate, or Low"
           required: true
           type: multiplechoice
-          variable: urgency
+          variable: risk
           default: "moderate"
           choices: "high\nmoderate\nlow"
           new_question: true
@@ -275,7 +275,7 @@ controller_templates:
           question_description: "Critical, High, Moderate, or Low"
           required: true
           type: multiplechoice
-          variable: impact
+          variable: priority
           default: "moderate"
           choices: "critical\nhigh\nmoderate\nlow"
           new_question: true
