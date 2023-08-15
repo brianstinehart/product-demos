@@ -212,6 +212,73 @@ controller_templates:
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
       snow_host: https://{{ instance }}.service-now.com/
+    survey_enabled: true
+    survey:
+      name: ''
+      description: ''
+      spec:
+        - question_name: Incident Description Summary
+          question_description: Short description of incident
+          required: true
+          type: text
+          variable: short_description
+          min: 0
+          max: 1024
+          default: 'This is a test change request opened by Ansible'
+          choices: ''
+          new_question: true
+        - question_name: Incident Description
+          question_description: Detailed description of change request
+          required: true
+          type: text
+          variable: description
+          min: 0
+          max: 1024
+          default: 'This is a detailed description of the change request'
+          choices: ''
+          new_question: true
+        - question_name: Incident Assigned To
+          question_description: Who the incident will be assigned to
+          required: true
+          type: text
+          variable: assigned_to
+          min: 0
+          max: 1024
+          default: 'Charlie Whitherspoon'
+          choices: ''
+          new_question: true
+        - question_name: Incident type
+          question_description: "Standard, Normal, or Emergency"
+          required: true
+          type: multiplechoice
+          variable: urgency
+          default: "standard"
+          choices: "standard\nnormal\nemergency"
+          new_question: true
+        - question_name: Incident Risk
+          question_description: "High, Moderate, or Low"
+          required: true
+          type: multiplechoice
+          variable: urgency
+          default: "moderate"
+          choices: "high\nmoderate\nlow"
+          new_question: true
+        - question_name: Incident Impact
+          question_description: "High, Medium, or Low"
+          required: true
+          type: multiplechoice
+          variable: impact
+          default: "medium"
+          choices: "high\nmedium\nlow"
+          new_question: true
+        - question_name: Incident Priority
+          question_description: "Critical, High, Moderate, or Low"
+          required: true
+          type: multiplechoice
+          variable: impact
+          default: "moderate"
+          choices: "critical\nhigh\nmoderate\nlow"
+          new_question: true
 
   - name: "ServiceNow Close Change Request"
     job_type: run
