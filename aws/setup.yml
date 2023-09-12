@@ -36,6 +36,6 @@ controller_templates:
     job_type: run
     inventory: "Demo Inventory"
     project: "Cloud Deploy"
-    playbook: "playbooks/aws/resources.yml"
+    playbook: "playbooks/aws/provision.yml"
     credentials:
     - "AWS"
