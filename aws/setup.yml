@@ -30,3 +30,12 @@ controller_credentials:
     inputs:
       password: '{{ aws_secret_key }}'
       username: '{{ aws_access_key }}'
+
+controller_templates:
+  - name: "Provision AWS"
+    job_type: run
+    inventory: "Demo Inventory"
+    project: "Cloud Deploy"
+    playbook: "playbooks/aws/resources.yml"
+    credentials:
+    - "AWS"
