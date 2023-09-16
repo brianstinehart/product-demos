@@ -114,7 +114,7 @@ controller_settings:
 
 controller_execution_environments:
   - name: "ServiceNow EE"
-    image: quay.io/rhbs/aap-ee
+    image: quay.io/rhbs/servicenow-ee
 
 controller_templates:
   - name: "ServiceNow Notification"
