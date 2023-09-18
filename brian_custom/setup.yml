@@ -294,7 +294,7 @@ controller_templates:
       spec:
         - question_name: Change Request Number
           question_description: ServiceNow Change Request Number
-          required: true
+          required: false
           type: text
           variable: chg_number
           min: 0
@@ -330,7 +330,7 @@ controller_templates:
       spec:
         - question_name: Incident Number
           question_description: ServiceNow Incident Number
-          required: true
+          required: false
           type: text
           variable: inc_number
           min: 0
