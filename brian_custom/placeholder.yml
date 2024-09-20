@@ -1,0 +1,28 @@
+---
+controller_components:
+  - projects  
+  - credential_types
+  - credentials
+  # - applications
+  - settings
+  # - inventories
+  # - hosts
+  # - inventory_sources
+  - execution_environments
+  - job_templates
+  - workflow_job_templates
+  - job_launch
+  # - project_update
+
+controller_templates:
+  - name: "AWS Cisco Bounce Port"
+    job_type: run
+    inventory: "AWS Network"
+    project: "Cloud Deploy"
+    playbook: "playbooks/aws/cisco_bounce_port.yml"
+    execution_environment: Network EE
+    credentials:
+    - "AWS Machine"
+    extra_vars:
+      ansible_connection: ansible.netcommon.network_cli
+      ansible_network_os: ios
