@@ -90,6 +90,14 @@ controller_credentials:
       uri_password: '{{ uri_password }}'
       controller_url: '{{ controller_url }}'
 
+  - name: Quay Credential
+    credential_type: Container Registry
+    organization: Default
+    inputs:
+      host: "quay.io"
+      username: "rhbs"
+      password: "8jXm3sa@kyNpsQF"
+
 # controller_applications:
 #   - name: Brian ServiceNow Dev
 #     description: "{{ instance }}"
@@ -115,6 +123,7 @@ controller_settings:
 controller_execution_environments:
   - name: "ServiceNow EE"
     image: quay.io/rhbs/servicenow-ee
+    credential: "Quay Credential"
 
 controller_templates:
   - name: "ServiceNow Notification"
