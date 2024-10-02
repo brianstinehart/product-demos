@@ -27,7 +27,7 @@
 
   collections:
     - awx.awx
-    - redhat_cop.controller_configuration
+    - infra.controller_configuration
 
   tasks:
 
