@@ -6,24 +6,24 @@
   # vars:
   #   demo: "<insert_variable>"
   #   controller_validate_certs: false
-  #   controller_hostname: "<insert_variable>"
   #   controller_username: "<insert_variable>"
   #   controller_password: "<insert_variable>"
+  #   controller_hostname: "<insert_variable>" # Controller URL (e.g. https://aap-controller-aap.apps.cluster-6fk65.6fk65.sandbox667.opentlc.com)
   #   snow_username: "<insert_variable>" # ServiceNow username
   #   snow_password: "<insert_variable>" # ServiceNow password
   #   snow_instance: "<insert_variable>" # ServiceNow URL (e.g. https://dev191515.service-now.com/)
   #   uri_user: "{{ controller_username }}"
   #   uri_password: "{{ controller_password }}"
   #   controller_url: "{{ controller_hostname }}"
-  ##### Also need to update Resource Group in Azure vars file (Cloud-Deploy repo; e.g. "openenv-kpz7p")
   #   azure_sub_id: "<insert_variable>" # from RHDP details
   #   azure_client_id: "<insert_variable>" # Azure Console > App registrations (Owned apps tabs)
   #   azure_client_secret: "<insert_variable>" # Azure Console > App registrations > Client creds > Create new client secret
   #   azure_tenant_id: "<insert_variable>" # Azure Console > App registrations (Owned apps tabs)
-  #   azure_resource_group: "<insert_variable>" # from RHDP details
+  #   azure_resource_group: "<insert_variable>" # from RHDP details (e.g. openenv-kpz7g)
   #   ocp_username: "<insert_variable>"
   #   ocp_password: "<insert_variable>"
   #   ocp_api_url: "<insert_variable>"
+##### Also need to update Resource Group in Azure vars file (Cloud-Deploy repo; e.g. "openenv-kpz7p")
 
   collections:
     - awx.awx
