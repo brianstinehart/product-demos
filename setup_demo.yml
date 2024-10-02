@@ -20,6 +20,7 @@
   #   azure_client_id: "<insert_variable>" # Azure Console > App registrations (Owned apps tabs)
   #   azure_client_secret: "<insert_variable>" # Azure Console > App registrations > Client creds > Create new client secret
   #   azure_tenant_id: "<insert_variable>" # Azure Console > App registrations (Owned apps tabs)
+  #   azure_resource_group: "<insert_variable>" # from RHDP details
 
   collections:
     - awx.awx

@@ -149,6 +149,7 @@ controller_templates:
     - "Azure"
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
+      azure_resource_group: "{{ azure_resource_group }}"
 
   - name: "ServiceNow Notification"
     job_type: run
