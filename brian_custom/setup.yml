@@ -114,6 +114,14 @@ controller_credentials:
       uri_password: '{{ uri_password }}'
       controller_url: '{{ controller_url }}'
 
+  - name: OCP Credential
+    credential_type: URI
+    organization: Default
+    inputs:
+      uri_user: '{{ ocp_user }}'
+      uri_password: '{{ ocp_password }}'
+      ocp_api_url: '{{ ocp_api_url }}'
+
   - name: Quay Credential
     credential_type: Container Registry
     organization: Default
