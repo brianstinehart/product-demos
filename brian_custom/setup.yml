@@ -115,7 +115,7 @@ controller_credentials:
       controller_url: '{{ controller_url }}'
 
   - name: OCP Credential
-    credential_type: URI
+    credential_type: OpenShift
     organization: Default
     inputs:
       ocp_username: '{{ ocp_username }}'
