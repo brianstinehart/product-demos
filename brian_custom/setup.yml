@@ -143,7 +143,7 @@ controller_templates:
     job_type: run
     inventory: "Demo Inventory"
     project: "Cloud Deploy"
-    playbook: "playbooks/servicenow/snow_notify.yml"
+    playbook: "playbooks/azure/provision.yml"
     execution_environment: Azure EE
     credentials:
     - "Azure"

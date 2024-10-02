@@ -15,11 +15,11 @@
   #   uri_user: "{{ controller_username }}"
   #   uri_password: "{{ controller_password }}"
   #   controller_url: "{{ controller_hostname }}"
-  ##### Also need to update Resource Group in Azure vars file (Cloud-Deploy repo; e.g. "openenv-kpz7p"
-  #   azure_sub_id: "<insert_variable>"
-  #   azure_client_id: "<insert_variable>"
-  #   azure_client_secret: "<insert_variable>"
-  #   azure_tenant_id: "<insert_variable>"
+  ##### Also need to update Resource Group in Azure vars file (Cloud-Deploy repo; e.g. "openenv-kpz7p")
+  #   azure_sub_id: "<insert_variable>" # from RHDP details
+  #   azure_client_id: "<insert_variable>" # Azure Console > App registrations (Owned apps tabs)
+  #   azure_client_secret: "<insert_variable>" # Azure Console > App registrations > Client creds > Create new client secret
+  #   azure_tenant_id: "<insert_variable>" # Azure Console > App registrations (Owned apps tabs)
 
   collections:
     - awx.awx
