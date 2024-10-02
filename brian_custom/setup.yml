@@ -107,6 +107,13 @@ controller_credentials:
       tenant: "{{ azure_tenant_id }}"
       subscription: "{{ azure_sub_id }}"
 
+  - name: Windows Machice
+    credential_type: Machice
+    organization: Default
+    inputs:
+      username: "bstineha"
+      password: "ansible123!"
+
 # controller_applications:
 #   - name: Brian ServiceNow Dev
 #     description: "{{ instance }}"
