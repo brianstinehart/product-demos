@@ -93,9 +93,9 @@ controller_credential_types:
         - ocp_api_url
     injectors:
       extra_vars:
-        ocp_username: '{{ uri_user }}'
-        ocp_password: '{{ uri_password }}'
-        ocp_api_url: '{{ controller_url }}'
+        ocp_username: '{{ ocp_username }}'
+        ocp_password: '{{ ocp_password }}'
+        ocp_api_url: '{{ ocp_api_url }}'
 
 controller_credentials:
   - name: ServiceNow Dev
