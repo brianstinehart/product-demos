@@ -29,25 +29,25 @@ controller_credential_types:
     kind: "cloud"
     inputs:
       fields:
-        - id: username
+        - id: snow_username
           type: string
           label: Username
-        - id: password
+        - id: snow_password
           type: string
           label: Password
           secret: true
-        - id: instance
+        - id: snow_instance
           type: string
           label: Instance
       required:
-        - username
-        - password
-        - instance
+        - snow_username
+        - snow_password
+        - snow_instance
     injectors:
       extra_vars:
-        snow_username: !unsafe '{{ username }}'
-        snow_password: !unsafe '{{ password }}'
-        snow_instance: !unsafe '{{ instance }}'
+        snow_username: !unsafe '{{ snow_username }}'
+        snow_password: !unsafe '{{ snow_password }}'
+        snow_instance: !unsafe '{{ snow_instance }}'
 
   - name: "URI"
     kind: "cloud"
@@ -73,14 +73,38 @@ controller_credential_types:
         uri_password: '{{ uri_password }}'
         controller_url: '{{ controller_url }}'
 
+  - name: "OpenShift"
+    kind: "cloud"
+    inputs:
+      fields:
+        - id: ocp_username
+          type: string
+          label: Username
+        - id: ocp_password
+          type: string
+          label: Password
+          secret: true
+        - id: ocp_api_url
+          type: string
+          label: Instance
+      required:
+        - ocp_username
+        - ocp_password
+        - ocp_api_url
+    injectors:
+      extra_vars:
+        ocp_username: '{{ uri_user }}'
+        ocp_password: '{{ uri_password }}'
+        ocp_api_url: '{{ controller_url }}'
+
 controller_credentials:
   - name: ServiceNow Dev
     credential_type: ServiceNow
     organization: Default
     inputs:
-      username: "{{ username }}"
-      password: "{{ password }}"
-      instance: "{{ instance }}"
+      snow_username: "{{ snow_username }}"
+      snow_password: "{{ snow_password }}"
+      snow_instance: "{{ snow_instance }}"
 
   - name: URI Credential
     credential_type: URI
@@ -116,10 +140,10 @@ controller_credentials:
 
 # controller_applications:
 #   - name: Brian ServiceNow Dev
-#     description: "{{ instance }}"
+#     description: "{{ snow_instance }}"
 #     organization: "Default"
 #     authorization_grant_type: "authorization-code"
-#     redirect_uris: "https://{{ instance }}.service-now.com/oauth_redirect.do"
+#     redirect_uris: "https://{{ snow_instance }}.service-now.com/oauth_redirect.do"
 #     client_type: "confidential"
 
 controller_settings:

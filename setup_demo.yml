@@ -9,9 +9,9 @@
   #   controller_hostname: "<insert_variable>"
   #   controller_username: "<insert_variable>"
   #   controller_password: "<insert_variable>"
-  #   username: "<insert_variable>"
-  #   password: "<insert_variable>"
-  #   instance: "<insert_variable>"
+  #   snow_username: "<insert_variable>" # ServiceNow username
+  #   snow_password: "<insert_variable>" # ServiceNow password
+  #   snow_instance: "<insert_variable>" # ServiceNow URL (e.g. https://dev191515.service-now.com/)
   #   uri_user: "{{ controller_username }}"
   #   uri_password: "{{ controller_password }}"
   #   controller_url: "{{ controller_hostname }}"
@@ -21,6 +21,9 @@
   #   azure_client_secret: "<insert_variable>" # Azure Console > App registrations > Client creds > Create new client secret
   #   azure_tenant_id: "<insert_variable>" # Azure Console > App registrations (Owned apps tabs)
   #   azure_resource_group: "<insert_variable>" # from RHDP details
+  #   ocp_username: "<insert_variable>"
+  #   ocp_password: "<insert_variable>"
+  #   ocp_api_url: "<insert_variable>"
 
   collections:
     - awx.awx
