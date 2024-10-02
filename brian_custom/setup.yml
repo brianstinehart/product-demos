@@ -118,7 +118,7 @@ controller_credentials:
     credential_type: URI
     organization: Default
     inputs:
-      ocp_username: '{{ ocp_user }}'
+      ocp_username: '{{ ocp_username }}'
       ocp_password: '{{ ocp_password }}'
       ocp_api_url: '{{ ocp_api_url }}'
 
