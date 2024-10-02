@@ -37,7 +37,7 @@ controller_credentials:
       username: "{{ controller_username }}"
 
 controller_templates:
-  - name: "Brian ServiceNow Setup"
+  - name: "Brian Demo Setup"
     job_type: run
     inventory: "Demo Inventory"
     project: "Demo Setup"
@@ -49,12 +49,20 @@ controller_templates:
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
       demo: brian_custom
-      username: "{{ username }}"
-      password: "{{ password }}"
-      instance: "{{ instance }}"
+      snow_username: "{{ snow_username }}"
+      snow_password: "{{ snow_password }}"
+      snow_instance: "{{ snow_instance }}"
       uri_user: '{{ uri_user }}'
       uri_password: '{{ uri_password }}'
       controller_url: '{{ controller_url }}'
+      azure_sub_id: '{{ azure_sub_id }}'
+      azure_client_id: '{{ azure_client_id }}'
+      azure_client_secret: '{{ azure_client_secret }}'
+      azure_tenant_id: '{{ azure_tenant_id }}'
+      azure_resource_group: '{{ azure_resource_group }}'
+      ocp_username: '{{ ocp_username }}'
+      ocp_password: '{{ ocp_password }}'
+      ocp_api_url: '{{ ocp_api_url }}'
 
 controller_launch_jobs:
   - name: Brian ServiceNow Setup
