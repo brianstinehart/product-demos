@@ -65,4 +65,4 @@ controller_templates:
       ocp_api_url: '{{ ocp_api_url }}'
 
 controller_launch_jobs:
-  - name: Brian ServiceNow Setup
+  - name: Brian Demo Setup
