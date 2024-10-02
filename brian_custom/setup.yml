@@ -98,6 +98,15 @@ controller_credentials:
       username: "rhbs"
       password: "8jXm3sa@kyNpsQF"
 
+  - name: Azure
+    credential_type: Microsoft Azure Resource Manager
+    organization: Default
+    inputs:
+      client: "{{ azure_client_id }}"
+      secret: "{{ azure_client_secret }}"
+      tenant: "{{ azure_tenant_id }}"
+      subscription: "{{ azure_sub_id }}"
+
 # controller_applications:
 #   - name: Brian ServiceNow Dev
 #     description: "{{ instance }}"
@@ -125,7 +134,22 @@ controller_execution_environments:
     image: quay.io/rhbs/servicenow-ee
     credential: "Quay Credential"
 
+  - name: "Azure EE"
+    image: quay.io/rhbs/azure-ee
+    credential: "Quay Credential"
+
 controller_templates:
+  - name: "Azure Provision Windows"
+    job_type: run
+    inventory: "Demo Inventory"
+    project: "Cloud Deploy"
+    playbook: "playbooks/servicenow/snow_notify.yml"
+    execution_environment: Azure EE
+    credentials:
+    - "Azure"
+    extra_vars:
+      ansible_python_interpreter: /usr/bin/python3
+
   - name: "ServiceNow Notification"
     job_type: run
     inventory: "Demo Inventory"

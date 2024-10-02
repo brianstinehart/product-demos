@@ -4,17 +4,23 @@
   connection: local
   gather_facts: false
   # vars:
-  #   demo: "{{ <insert_variable }}"
+  #   demo: "<insert_variable>"
   #   controller_validate_certs: false
-  #   controller_hostname: "{{ <insert_variable }}"
-  #   controller_username: "{{ <insert_variable }}"
-  #   controller_password: "{{ <insert_variable }}"
-  #   username: "{{ <insert_variable }}"
-  #   password: "{{ <insert_variable }}"
-  #   instance: "{{ <insert_variable }}"
+  #   controller_hostname: "<insert_variable>"
+  #   controller_username: "<insert_variable>"
+  #   controller_password: "<insert_variable>"
+  #   username: "<insert_variable>"
+  #   password: "<insert_variable>"
+  #   instance: "<insert_variable>"
   #   uri_user: "{{ controller_username }}"
   #   uri_password: "{{ controller_password }}"
   #   controller_url: "{{ controller_hostname }}"
+  ##### Also need to update Resource Group in Azure vars file (Cloud-Deploy repo; e.g. "openenv-kpz7p"
+  #   azure_sub_id: "<insert_variable>"
+  #   azure_client_id: "<insert_variable>"
+  #   azure_client_secret: "<insert_variable>"
+  #   azure_tenant_id: "<insert_variable>"
+
   collections:
     - awx.awx
     - redhat_cop.controller_configuration
