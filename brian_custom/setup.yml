@@ -139,8 +139,8 @@ controller_credentials:
       tenant: "{{ azure_tenant_id }}"
       subscription: "{{ azure_sub_id }}"
 
-  - name: Windows Machice
-    credential_type: Machice
+  - name: Windows Machine
+    credential_type: Machine
     organization: Default
     inputs:
       username: "bstineha"
