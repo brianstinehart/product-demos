@@ -118,8 +118,8 @@ controller_credentials:
     credential_type: URI
     organization: Default
     inputs:
-      uri_user: '{{ ocp_user }}'
-      uri_password: '{{ ocp_password }}'
+      ocp_username: '{{ ocp_user }}'
+      ocp_password: '{{ ocp_password }}'
       ocp_api_url: '{{ ocp_api_url }}'
 
   - name: Quay Credential
